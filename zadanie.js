@@ -1,8 +1,8 @@
-// 1. ZMIENNE I TYPY
+console.log("---------------------------");
+console.log(" 1. Zmienne i typy");
+console.log("---------------------------");
 
-//1a)
-
-console.log(1 + "a");
+console.log("1a");
 
 const isDone = false;
 const isAdult = true;
@@ -11,9 +11,7 @@ const word = "słowo";
 
 console.log(isDone, isAdult, number, word);
 
-//1b)
-
-console.log(1 + "b");
+console.log("1b");
 
 console.log(
   2 + "2",
@@ -42,12 +40,12 @@ console.log(
 );
 console.log("=== sprawdza czy wartości są równe, uwzględniając tym razem typ");
 
-console.log(1 + "c");
+console.log("1c");
 const ref =
   "Typ referencyjny od typu prostego różni się tym, że zapisywana wartość to nie treść a adres wskazujący na jego położenie. Typ referencyjny to obiekty, tablice, a prosty to np. string, number";
 console.log(ref);
 
-console.log(1 + "d");
+console.log("1d");
 
 let val = 0;
 let num = "2137";
@@ -55,13 +53,13 @@ let str = 007;
 let und = undefined;
 console.log(Boolean(val), Number(num), str.toString(), Boolean(und));
 
-console.log(1 + "e");
+console.log("1e");
 
 const newArray = [];
 newArray.push(1, 2, 3);
 console.log(newArray);
 
-console.log(1 + "f");
+console.log("1f");
 
 let obj = new Object();
 obj.name = "Kamil";
@@ -69,13 +67,13 @@ obj.age = 30;
 obj.city = "Krotoszyn";
 console.log(obj);
 
-console.log(1 + "g");
+console.log("1g");
 
 console.log(
   "Typ Nan(Not-a-Number) to wartość typu liczbowego, któa nie jest liczbą. Najszczęściej oznacza że do funkcji zostały przekzazane złe parametry. Nan porównana do Nan lub innej wartości liczbowej zwróci false."
 );
 
-console.log(1 + "h");
+console.log("1h");
 
 console.log(
   "Typ symbol to prymitywny typ danych, któa zawsze ma unkalną wartość. Dzięki temu znajduje zastosowanie w dodawaniu dodatkowych funkcjonalności w obiektach."
@@ -386,3 +384,85 @@ console.log(" 4. Metody");
 console.log("---------------------------");
 
 console.log("4a");
+const names = ["Seba", "Kari", "Mati", "Andżi"];
+const hello = names.map((nameHello) => `Witaj ${nameHello}`);
+console.log(hello);
+
+console.log("4b");
+const array10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const parzyste = array10.filter((item) => item % 2 === 0);
+console.log(parzyste);
+
+console.log("4c");
+const people = [
+  {
+    name: "Tomasz",
+    lastname: "Kowalski",
+    gender: "male",
+  },
+  {
+    name: "Karol",
+    lastname: "Nowak",
+    gender: "male",
+  },
+  {
+    name: "Joanna",
+    lastname: "Kowalska",
+    gender: "female",
+  },
+  {
+    name: "Anna",
+    lastname: "Nowak",
+    gender: "female",
+  },
+];
+
+const female = people.filter((item) => item.gender == "female");
+console.log(female);
+
+console.log("4d");
+const shopping =
+  "kawa MaSŁo chleb WODA ogórki jabłka Ziemniaki chipsy salcesoN wędLIna pieczarki Włoszczyzna heRBata truskawKi maliny";
+const list = (shoppingList) => {
+  const splitList = shoppingList.split(" ");
+  const lowerList = splitList.map((item) => item.toLowerCase());
+  lowerList.sort();
+  return lowerList;
+};
+
+console.log(list(shopping));
+
+console.log("4e");
+
+const alphabet = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
+const reverseAlphabet = alphabet.reverse().join("");
+
+console.log(reverseAlphabet);
